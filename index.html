@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>+62 — Suara Tanpa Saring</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header-box">
+            <h1>✦ +62 ✦</h1>
+            <p>Platform Aspirasi & Kritik Sosial Rakyat Indonesia</p>
+        </header>
+
+        <main class="main-grid">
+            <!-- Form Section -->
+            <section class="card form-card">
+                <h2>Kirim Aspirasi</h2>
+                <form id="aspirasiForm">
+                    <div class="form-group">
+                        <label for="kategori">Kategori</label>
+                        <select id="kategori" required>
+                            <option value="Fasilitas">Fasilitas Umum</option>
+                            <option value="Akademik">Akademik / Pendidikan</option>
+                            <option value="Kebijakan">Kebijakan / Sosial</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="nama">Nama / Pengirim (Opsional)</label>
+                        <input type="text" id="nama" placeholder="Contoh: Rakyat Jelata / Anonim">
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Isi Aspirasi</label>
+                        <textarea id="pesan" rows="4" placeholder="Tuliskan suara atau kritikmu di sini..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Kirim Suara</button>
+                </form>
+            </section>
+
+            <!-- Feed Section -->
+            <section class="card feed-card">
+                <h2>Daftar Aspirasi Masuk</h2>
+                <div id="aspirasiList" class="aspirasi-list">
+                    <!-- Data will be rendered here by JS -->
+                    <p class="empty-state">Belum ada aspirasi masuk. Jadilah yang pertama bersuara!</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Kelompok 1 — USRC (+62)</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
