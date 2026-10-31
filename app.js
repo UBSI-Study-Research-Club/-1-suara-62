@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
             div.className = 'aspirasi-item';
             div.innerHTML = `
                 <div class="meta">
-                    <span>[${item.kategori}] ${item.nama || 'Anonim'}</span>
-                    <span>${item.tanggal}</span>
+                    <span><strong>[${item.kategori}]</strong> ${item.nama || 'Anonim'}</span>
+                    <span class="date">${item.tanggal}</span>
                 </div>
-                <p>${item.pesan}</p>
+                <p class="message-text">${item.pesan}</p>
             `;
             aspirasiList.appendChild(div);
         });
