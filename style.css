@@ -135,3 +135,320 @@ footer {
     font-size: 0.9rem;
     font-weight: bold;
 }
+
+/* Aurel: header, page composition, and footer */
+:root {
+    --paper: #F4F4F0;
+    --ink: #000000;
+    --yellow: #FACC15;
+    --red: #EF4444;
+    --blue: #3B82F6;
+    --line: 2px solid var(--ink);
+    --hard-shadow: 5px 5px 0 var(--ink);
+    --display: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    --body: "Trebuchet MS", Arial, sans-serif;
+}
+
+* {
+    font-family: var(--body);
+}
+
+body {
+    min-width: 320px;
+    padding: 24px;
+    background-color: var(--paper);
+    background-image: radial-gradient(var(--ink) 0.65px, transparent 0.65px);
+    background-size: 17px 17px;
+    color: var(--ink);
+    font-family: var(--body);
+    line-height: 1.5;
+}
+
+.container {
+    width: min(100%, 1120px);
+    max-width: none;
+    margin: 0 auto;
+}
+
+.topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0 2px 13px;
+    border-bottom: var(--line);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.topline-brand,
+.topic-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-mark {
+    display: grid;
+    width: 28px;
+    height: 28px;
+    place-items: center;
+    border: var(--line);
+    background: var(--yellow);
+    box-shadow: 2px 2px 0 var(--ink);
+    font-family: var(--display);
+    font-size: 18px;
+}
+
+.topline-note {
+    text-align: right;
+}
+
+.masthead {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 20px;
+    padding: clamp(38px, 7vw, 76px) 0 28px;
+}
+
+.eyebrow {
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.masthead h1 {
+    font-family: var(--display);
+    font-size: clamp(82px, 17vw, 176px);
+    font-weight: 900;
+    line-height: 0.78;
+    letter-spacing: -0.055em;
+}
+
+.masthead-subtitle {
+    display: inline-block;
+    max-width: 430px;
+    margin: 22px 0 0 4px;
+    padding: 9px 12px;
+    border: var(--line);
+    background: var(--yellow);
+    box-shadow: 4px 4px 0 var(--ink);
+    font-size: clamp(13px, 1.7vw, 17px);
+    font-weight: 900;
+    line-height: 1.3;
+    text-transform: uppercase;
+    transform: rotate(-1deg);
+}
+
+.header-stamp {
+    display: grid;
+    width: clamp(76px, 12vw, 124px);
+    aspect-ratio: 1;
+    place-items: center;
+    border: var(--line);
+    background: var(--red);
+    box-shadow: 6px 6px 0 var(--ink);
+    color: #FFFFFF;
+    font-family: var(--display);
+    font-size: clamp(19px, 3vw, 32px);
+    line-height: 0.9;
+    text-align: center;
+    transform: rotate(5deg);
+}
+
+.topic-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin: 17px 0 18px;
+    padding: 12px 14px;
+    border: var(--line);
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.topic-dot {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--paper);
+    background: var(--yellow);
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: stretch;
+    gap: 20px;
+}
+
+.card {
+    min-width: 0;
+    overflow: hidden;
+    border: var(--line);
+    background: #FFFFFF;
+    box-shadow: var(--hard-shadow);
+    padding: 0;
+}
+
+.card h2 {
+    margin: 0;
+    padding: 17px 18px;
+    border-bottom: var(--line);
+    font-family: var(--display);
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.form-card h2 {
+    background: var(--yellow);
+}
+
+.feed-card h2 {
+    background: var(--blue);
+}
+
+.form-card form,
+.aspirasi-list {
+    padding: 20px;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    min-height: 44px;
+    border-radius: 0;
+    color: var(--ink);
+    font: inherit;
+    font-size: 15px;
+}
+
+.form-group textarea {
+    min-height: 112px;
+    resize: vertical;
+}
+
+.form-group input:focus-visible,
+.form-group select:focus-visible,
+.form-group textarea:focus-visible,
+.btn-primary:focus-visible {
+    outline: 3px dashed var(--blue);
+    outline-offset: 3px;
+}
+
+.btn-primary {
+    min-height: 48px;
+    border: var(--line);
+    border-radius: 0;
+    background: var(--red);
+    box-shadow: 3px 3px 0 var(--ink);
+    color: #FFFFFF;
+    font: inherit;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    background: #D92E2E;
+}
+
+.btn-primary:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 var(--ink);
+}
+
+.aspirasi-item {
+    overflow-wrap: anywhere;
+    border: var(--line);
+    box-shadow: 2px 2px 0 var(--ink);
+}
+
+.aspirasi-item .meta {
+    gap: 12px;
+    font-weight: 900;
+}
+
+.empty-state {
+    border: 2px dashed var(--ink);
+    background: var(--paper);
+    color: #444444;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-top: 29px;
+    padding-top: 13px;
+    border-top: var(--line);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.footer-brand {
+    font-family: var(--display);
+    font-size: 17px;
+    letter-spacing: 0;
+}
+
+@media (max-width: 760px) {
+    body {
+        padding: 16px;
+    }
+
+    .masthead {
+        padding-top: 48px;
+    }
+
+    .main-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .topic-bar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 440px) {
+    .topline {
+        font-size: 9px;
+    }
+
+    .masthead {
+        gap: 12px;
+    }
+
+    .header-stamp {
+        width: 62px;
+        font-size: 17px;
+    }
+
+    .site-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
