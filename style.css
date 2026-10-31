@@ -96,17 +96,30 @@ body {
 .aspirasi-item {
     background: #FFFBEB;
     border: 2px solid #000;
-    padding: 12px;
-    margin-bottom: 12px;
-    box-shadow: 2px 2px 0px #000;
+    padding: 14px;
+    margin-bottom: 14px;
+    box-shadow: 3px 3px 0px #000;
+    transition: transform 0.1s ease;
+}
+
+.aspirasi-item:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px #000;
 }
 
 .aspirasi-item .meta {
     font-size: 0.85rem;
     font-weight: bold;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px dashed #000;
+    padding-bottom: 4px;
+}
+
+.aspirasi-item .message-text {
+    word-break: break-word;
+    font-size: 0.95rem;
 }
 
 .empty-state {
